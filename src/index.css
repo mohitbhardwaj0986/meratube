@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+.search-input:focus{
+ outline: 1px solid rgb(111, 111, 250);
+}
+html, body{
+    overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+ html, body {
+    overflow: visible;
+  
+  }
+}
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 2s ease 2s forwards;
+  }
+  
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #444;
+    border-top-color: #1534e3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+  }
+  
+  .loading-text {
+    color: #312b2b;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInOut 2s ease-in-out infinite;
+  }
+  
+  /* Animations */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
