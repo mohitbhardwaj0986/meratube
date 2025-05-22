@@ -8,6 +8,7 @@ import { CiShare2 } from "react-icons/ci";
 import Card from "./Card";
 import SomthingWentwrong from "./SomthingWentwrong";
 import SearchBtn from "./SearchBtn";
+import { toast } from "react-toastify";
 
 function VideoPlayer() {
   const {saved,setSaved} = useData()
@@ -18,6 +19,7 @@ function VideoPlayer() {
     console.log("cala");
  
     setSaved([...saved,card])
+      toast.success("Saved");
   };
   
   
