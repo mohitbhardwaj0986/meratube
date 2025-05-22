@@ -13,7 +13,7 @@ import { toast } from "react-toastify";
 function VideoPlayer() {
   const {saved,setSaved} = useData()
   const { id } = useParams();
-  const { card, data, setCardData, channel, setChannel } = useData();
+  const {darkMode, card, data, setCardData, channel, setChannel } = useData();
 
     const handleClick = () => {
     console.log("cala");
@@ -57,7 +57,7 @@ function VideoPlayer() {
   }, [id, data]);
 
   return (
-    <div className=" w-full px-5 xl:w-[85vw] h-screen overflow-y-scroll">
+    <div className= {`w-full px-5 xl:w-[85vw] ${darkMode ? "!bg-black text-white" : "bg-white text-black"} xl:overflow-y-scroll`}>
       <SearchBtn />
       <div   className="">
         <iframe
@@ -103,7 +103,7 @@ function VideoPlayer() {
         </div>
       </div>
       <div className="w-full pt-10 ">
-        <div className="w-full h-screen flex flex-wrap gap-5">
+        <div className="w-full  flex flex-wrap gap-5">
           {Array.isArray(data?.data?.items) && data.data.items.length > 0 ? (
             data.data.items.map((card) => <Card key={card.id} card={card} />)
           ) : (
