@@ -20,7 +20,7 @@ function Saved() {
   ));
 
   return (
-    <div className={`xl:w-[85vw] ${darkMode ? "!bg-black text-white" : "bg-white text-black"} px-5 py-  xl:py-10  flex gap-3 flex-col justify-center flex-wrap  xl:px-10`}>
+    <div className={`xl:w-[85vw] ${darkMode ? "!bg-black text-white" : "bg-white text-black"} px-5 py-  xl:py-10  flex gap-3 h-screen flex-col justify-start flex-wrap xl:px-10`}>
         <h1 className="text-xl text-center">Saved items</h1>
       {savedData.length?savedData:<h1 className="xl:text-3xl font-bold text-center h-screen">No Data...</h1>}
     </div>
