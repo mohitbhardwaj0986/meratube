@@ -62,12 +62,12 @@ function Search() {
         </button>
       </form>
       
-       {searchData?.data?.items?.length > 0 ?  (<div className="w-full h-screen overflow-y-scroll flex flex-wrap gap-5 px-4">
+       {searchData?.data?.items?.length > 0 ?  (<div className="w-full overflow-y-scroll flex flex-wrap gap-5 px-4">
         {searchData?.data?.items.map((card) => (
           <Card key={card.id.videoId} card={card}  />
         
         ))}
-      </div>):<h1 className="text-center text-3xl font-bold pt-10">No data...</h1>}
+      </div>):<h1 className="text-center text-3xl font-bold pt-10 h-screen">No data...</h1>}
  
    
     </>

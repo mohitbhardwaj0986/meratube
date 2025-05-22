@@ -38,8 +38,10 @@ function Navbar() {
           <BiSolidSave />
           Saved
         </Link>
-
+        <div className="flex items-center gap-2 bg-gray-600 text-white rounded-xl pl-2 ">
+          Mode
         <DarkModeButton />
+        </div>
       </div>
     </div>
   );
